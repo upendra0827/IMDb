@@ -1,0 +1,289 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.top {
+  padding: 1rem;
+}
+
+.head {
+  width: 10%;
+  float: left;
+}
+
+.top .link {
+  padding: 1rem;
+  /* float: left; */
+}
+
+.eachLink {
+  padding: 1rem;
+  float: left;
+}
+
+.eachLink:hover {
+  background-color: rgb(226, 180, 158);
+  border-radius: 5px;
+}
+
+.top {
+  background: rgb(132, 173, 141);
+  margin-bottom: 1rem;
+}
+
+.tail h1 {
+  font-family: italic;
+  color: rgb(135, 53, 82);
+}
+
+.container .cards {
+  position: relative;
+  /* width: 275px; */
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .cards:hover {
+  z-index: 1;
+  transform: scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0. .5);
+}
+
+.container .cards .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .cards .image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, #f00, #000);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .cards:hover .image::before {
+  opacity: 1;
+}
+
+.container .cards .image img {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* object-fit: cover; */
+}
+
+.container .cards .content {
+  position: relative;
+  top: 15rem;
+  z-index: 2;
+}
+
+.container .cards .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+}
+
+.container .cards:hover .content h2 {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.allDirectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieCard img {
+  height: 25rem;
+  width: 25rem;
+}
+
+.moviesContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.moviesContainer .movieCard {
+  position: relative;
+  height: 25rem;
+  width: 25rem;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.moviesContainer .movieCard:hover {
+  z-index: 1;
+  transform: scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+}
+
+.moviesContainer .movieCard .imageBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.moviesContainer .movieCard .imageBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(26, 109, 125), rgb(18, 16, 16));
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.moviesContainer .movieCard:hover .imageBox::before {
+  opacity: 1;
+}
+
+.moviesContainer .movieCard .imageBox img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.moviesContainer .movieCard .movieContent {
+  position: relative;
+  top: 10.3rem;
+  z-index: 2;
+}
+
+
+.moviesContainer .movieCard .movieContent h1 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+}
+
+.moviesContainer .movieCard:hover .movieContent h1 {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.moviesContainer .movieCard .movieContent p {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 10px;
+  padding: 0.75rem;
+  transform: translateY(200px);
+}
+
+.moviesContainer .movieCard:hover .movieContent p {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.eachCategory {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  color: rgb(186, 137, 94);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cast {
+  margin-right: 0.3rem;
+  color: #f00;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.active {
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 550px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eachLink {
+    float: none;
+  }
+
+  .head {
+    float: none;
+    width: 100%;
+  }
+
+  .top .link {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
